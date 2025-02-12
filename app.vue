@@ -1,14 +1,17 @@
 <script setup lang="ts">
 import AppFooter from './components/AppFooter.vue';
 import AppHeader from './components/AppHeader.vue';
-import Home from './components/Home.vue';
+import Home from './components/Hero.vue';
 
 </script>
 
 <template>
   <div>
     <AppHeader />
-    <Home />
+    <main class="content">
+      <Home />
+
+    </main>
     <!-- <NuxtRouteAnnouncer />
     <NuxtWelcome /> -->
     <!-- <AppFooter /> -->
@@ -25,6 +28,10 @@ import Home from './components/Home.vue';
 body {
   font-family: "Inter", serif;
   color: var(--Black);
+}
+
+.content {
+  margin-top: 70px;
 }
 
 :root {
@@ -44,7 +51,7 @@ body {
   --Shade-4: #1B5E1F;
   --Shade-5: #103E13;
   --Tint-1: #89939E;
-
+  --Tint-2: #c2e1c7;
   
   --text-color: #333333;
 }
