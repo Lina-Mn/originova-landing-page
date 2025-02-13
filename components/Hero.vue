@@ -13,7 +13,7 @@
                     </div>
                 </div>
                 <div class="hero-img">
-                    <img src="~/public/Illustration.svg" alt="Hero">
+                    <img src="~/assets/images/Illustration.svg" alt="Hero">
                 </div>
             </div>
         </div>
@@ -46,9 +46,8 @@ export default {
     width: 100%;
     overflow: hidden;
     position: relative;
-
     padding: 96px 144px;
-
+    background-color: var(--Silver);
 }
 
 .carousel-inner {
@@ -91,7 +90,7 @@ export default {
 
 .hero-btn {
     flex: 1;
-    align-content: first baseline;
+    margin-top: 32px;
 }
 
 .hero-btn button {
@@ -105,7 +104,7 @@ export default {
 
 .hero-img {
     max-width: 100%;
-    padding: 0 144px;
+    margin: 0 144px;
 }
 
 .carousel-indicators {
@@ -115,6 +114,7 @@ export default {
     bottom: 10px;
     left: 50%;
     gap: 8px;
+    margin-bottom: 16px;
 }
 
 .carousel-indicators span {

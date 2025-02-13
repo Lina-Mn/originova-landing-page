@@ -2,7 +2,7 @@
     <header class="header">
         <nav class="nav-container">
             <div class="logo">
-                <img src="~/public/Logo.svg" alt="Nexcent" />
+                <img src="~/assets/images/Logo.svg" alt="Nexcent" />
             </div>
             <div class="nav-links">
                 <NuxtLink v-for="item in menuItems" :key="item" :to="item.toLowerCase()" class="nav-link">
@@ -33,7 +33,7 @@ export default {
     top: 0;
     left: 0;
     width: 100%;
-    background: var(--White);
+    background: var(--Silver);
     box-shadow: 0px 4px 8px 0px rgba(171, 190, 209, 0.4);
     height: 70px;
     padding: 16px 144px 16px 144px;
