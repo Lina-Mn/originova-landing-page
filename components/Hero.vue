@@ -4,7 +4,7 @@
             <div v-for="n in 3" :key="n" class="hero-section">
                 <div class="hero-content">
                     <div class="hero-text">
-                        <h1> Lessons and insights </h1>
+                        <h1 class="h1"> Lessons and insights </h1>
                         <span> from 8 years </span>
                         <p> Where to grow your business as a photographer: site or social media? </p>
                     </div>
@@ -72,6 +72,8 @@ export default {
     font-size: 64px;
     font-weight: 600;
     line-height: 76px;
+    letter-spacing: 0%;
+    text-align: left;
 }
 
 .hero-text h1 {

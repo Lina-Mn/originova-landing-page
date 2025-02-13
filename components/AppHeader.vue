@@ -33,9 +33,9 @@ export default {
     top: 0;
     left: 0;
     width: 100%;
-    background: var(--Silver);
-    box-shadow: 0px 4px 8px 0px rgba(171, 190, 209, 0.4);
     height: 70px;
+    background: var(--Silver);
+    /* box-shadow: 0px 4px 8px 0px rgba(171, 190, 209, 0.4); */
     padding: 16px 144px 16px 144px;
     z-index: 1;
 }

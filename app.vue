@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import AppFooter from './components/AppFooter.vue';
 import AppHeader from './components/AppHeader.vue';
 
 </script>
@@ -11,7 +12,7 @@ import AppHeader from './components/AppHeader.vue';
       <!-- <NuxtRouteAnnouncer />
       <NuxtWelcome /> -->
     </main>
-    <!-- <AppFooter /> -->
+    <AppFooter />
   </div>
 </template>
 
