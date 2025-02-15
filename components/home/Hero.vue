@@ -47,11 +47,17 @@ export default {
 <style>
 .hero {
     width: 100%;
+    overflow: hidden;
+}
+
+.hero .container{
+    max-width: 1000px;
 }
 
 .carousel {
     display: flex;
     align-content: center;
+    justify-content: start;
     width: 100dvw;
     height: 100%;
     overflow: hidden;
@@ -102,16 +108,21 @@ export default {
 }
 
 .hero-img {
+    flex: 1;
     flex-shrink: 0;
     max-width: 50%;
     /* max-width: 100%; */
     margin: 0 144px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero-img img {
     width: 100%;
     height: auto;
     object-fit: contain;
+    max-width: 100%;
 }
 
 .carousel-indicators {
@@ -119,7 +130,8 @@ export default {
     justify-content: center;
     position: absolute;
     bottom: 10px;
-    left: 50%;
+    left: 0;
+    right: 0;
     gap: 8px;
     margin-bottom: 16px;
 }
@@ -138,14 +150,32 @@ export default {
     background-color: var(--Primary);
 }
 
+
+
+@media (max-width: 1450px) {
+    .carousel {
+        padding: 9px 0 90px 0;
+        justify-content: center;
+    }
+}
+
 @media (max-width: 1100px) {
+
+    .carousel-inner {
+        /* display: ; */
+    }
+
     .carousel-inner
     .hero-section {
         flex-direction: column-reverse;
+        align-items: center;
     }
 
     .hero-section {
         gap: 50px;
+    }
+
+    .hero-content {
     }
 
     .hero-img img{
@@ -154,6 +184,7 @@ export default {
 
     .hero-btn {
         justify-content: center;
+        
     }
 }
 </style>

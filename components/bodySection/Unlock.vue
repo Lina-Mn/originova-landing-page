@@ -32,10 +32,8 @@
 
 .unlock .container {
     display: flex;
-    justify-content: center;
-    /* horizontally */
-    align-content: center;
-    /* vertically */
+    justify-content: center; /* horizontally */
+    align-content: center; /* vertically */
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;

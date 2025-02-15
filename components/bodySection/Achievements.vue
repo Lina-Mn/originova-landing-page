@@ -136,11 +136,16 @@ export default {
     .section-heading {
         margin: 20px 0 20px 0;
         padding: 20px 0 0 0;
+        text-align: center;
     }
 
     .stats-grid {
         margin: 0;
         padding: 0;
+    }
+
+    .counts {
+        padding: 28px;
     }
 }
 

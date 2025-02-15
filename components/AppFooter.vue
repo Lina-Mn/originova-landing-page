@@ -172,4 +172,34 @@ textarea::placeholder {
     top: 50%;
     transform: translateY(-50%);
 }
+
+
+@media (max-width: 1100px) {
+    .footer-brand {
+        padding: 32px 0 0 0;
+    }
+
+    .footer-info {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .company-info {
+        padding: 32px 0;
+        gap: 18px;
+    }
+
+    .footer-links {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0;
+        margin: 32px 0;
+        text-align: center;
+    }
+
+    .footer-links h4 {
+        text-align: center;
+    }
+}
+
 </style>

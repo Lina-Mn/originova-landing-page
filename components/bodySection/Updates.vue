@@ -112,6 +112,10 @@ export default {
         width: 50%;
     }
 
+    .community-card h4 {
+        padding: 0;
+    }
+
     .community-text p {
         margin: 0;
     }

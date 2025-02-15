@@ -75,13 +75,7 @@
 }
 
 .btn-tertiary-icon {
-    top: 104px;
-    left: 2320px;
-    padding-top: 16px;
-    padding-right: 32px;
-    padding-bottom: 16px;
-    padding-left: 32px;
-    gap: 8px;
+    padding: 16px;
     border-radius: 4px;
     color: var(--Primary);
 

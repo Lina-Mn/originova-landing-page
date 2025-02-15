@@ -59,10 +59,10 @@
     flex-direction: column;
 }
 
-.calendar-text {
+/* .calendar-text {
     margin-left: 60px;
     padding-right: 60px;
-}
+} */
 
 .calendar-text p {
     font-weight: 400;
@@ -74,7 +74,7 @@
 }
 
 .calendar-btn {
-    margin: 32px 0 0 60px;
+    margin: 32px 0 0 0;
 }
 
 .calendar-btn button {
@@ -103,6 +103,12 @@
         margin: 0;
         margin-top: 63px;
         text-align: justify;
+        align-items: center;
     }
+
+    .calendar-btn {
+        margin: 32px 0 0 0;
+    }
+
 }
 </style>
