@@ -1,12 +1,15 @@
 <script>
-import Hero from '@/components/Hero.vue';
-import Community from '@/components/Community.vue';
-import BodySection from '~/components/BodySection.vue';
+import { BodySectionAchievements, BodySectionCalendar, BodySectionUnlock, BodySectionUpdates, HomeCommunity, HomeHero } from '#components';
 
 </script>
 
 <template>
-    <Hero />
-    <Community />
-    <BodySection />
+    <!-- Home Section -->
+    <HomeHero />
+    <HomeCommunity />
+    <!-- Body Section -->
+    <BodySectionUnlock />
+    <BodySectionAchievements />
+    <BodySectionCalendar />
+    <BodySectionUpdates />
 </template>

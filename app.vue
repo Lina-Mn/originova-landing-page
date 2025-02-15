@@ -5,12 +5,10 @@ import AppHeader from './components/AppHeader.vue';
 </script>
 
 <template>
-  <div>
+  <div class="app-wrapper">
     <AppHeader />
     <main class="content">
-      <NuxtPage />      
-      <!-- <NuxtRouteAnnouncer />
-      <NuxtWelcome /> -->
+      <NuxtPage />
     </main>
     <AppFooter />
   </div>
@@ -26,10 +24,20 @@ import AppHeader from './components/AppHeader.vue';
 body {
   font-family: "Inter", serif;
   color: var(--Black);
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.app-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
 }
 
 .content {
   margin-top: 70px;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
-
 </style>

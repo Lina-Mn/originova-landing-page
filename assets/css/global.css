@@ -46,19 +46,19 @@
     color: var(--Grey);
 }
 
-.btn-primary {
+.btn-primary-medium {
     background-color: var(--Primary);
     color: var(--White);
     border: none;
     border-radius: 6px;
-    padding: 10px 20px;
+    padding: 14px 32px;
     border-radius: 4px;
     cursor: pointer;
 
-    font-weight: 500;
-    font-size: 14px;
+    font-weight: 400;
+    font-size: 16px;
     line-height: 20px;
-    letter-spacing: 0px;
+    letter-spacing: 0%;
     text-align: center;
 }
 
@@ -74,7 +74,7 @@
     left: 24px;
 }
 
-.btn-Tertiary {
+.btn-tertiary-icon {
     top: 104px;
     left: 2320px;
     padding-top: 16px;
@@ -91,6 +91,10 @@
     letter-spacing: 0%;
 }
 
-.btn-Tertiary:hover {
+.btn-tertiary:hover {
     text-decoration: underline;
+}
+
+.container {
+    max-width: 100dvw;
 }

@@ -1,17 +1,19 @@
 <template>
-    <div class="community">
-        <div class="community-section">
-            <h2 class="h2"> Manage your entire community in a single system </h2>
-            <p> Who is Nextcent suitable for? </p>
-        </div>
-        <div class="features-grid">
-            <div v-for="(feature, index) in features" :key="index" class="feature-card">
-                <img :src="feature.icon" :alt="feature.title" />
-                <h3>{{ feature.title }}</h3>
-                <p>{{ feature.description }}</p>
+    <section class="community">
+        <div class="container">
+            <div class="community-section">
+                <h2 class="h2"> Manage your entire community in a single system </h2>
+                <p> Who is Nextcent suitable for? </p>
+            </div>
+            <div class="features-grid">
+                <div v-for="(feature, index) in features" :key="index" class="feature-card">
+                    <img :src="feature.icon" :alt="feature.title" />
+                    <h3>{{ feature.title }}</h3>
+                    <p>{{ feature.description }}</p>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>
@@ -54,15 +56,20 @@ export default {
     margin-top: 40px;
 }
 
+.community-section h2 {
+    text-align: center;
+    margin: 0 449px;
+}
+
 .community-section p {
     text-align: center;
+    padding-top: 8px;
 }
 
 .features-grid {
     display: flex;
     gap: 8px;
-    padding: 0 144px;
-    
+    padding: 16px 144px;
 }
 
 .feature-card {
@@ -95,4 +102,17 @@ export default {
     text-align: center;
     padding-bottom: 24px;
 }
+
+
+@media (max-width: 1100px) {
+    .community-section h2 {
+        margin: 0px;
+    }
+
+    .features-grid {
+        flex-direction: column;
+    }
+}
+
+
 </style>
