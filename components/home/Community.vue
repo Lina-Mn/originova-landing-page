@@ -56,6 +56,10 @@ export default {
     margin-top: 40px;
 }
 
+.community .container {
+    gap: 16px;
+}
+
 .community-section h2 {
     text-align: center;
     margin: 0 449px;
@@ -68,13 +72,12 @@ export default {
 
 .features-grid {
     display: flex;
-    gap: 8px;
+    gap: 128px;
     padding: 16px 144px;
 }
 
 .feature-card {
     align-content: center;
-    margin: 24px 65px;
     box-shadow: 0px 2px 4px 0px rgba(171, 190, 209, 0.2);
     display: flex;
     flex-direction: column;
@@ -92,12 +95,11 @@ export default {
 }
 
 .feature-card img {
-    height: 64px;
-    width: 100%;
-    max-width: 100%;
+    min-height: 65px;
+    min-width: 65px;
     margin: auto;
-    padding: 0 101px;
     display: block;
+    flex-shrink: 0;
     object-fit: contain;
 }
 
@@ -107,17 +109,24 @@ export default {
     line-height: 20px;
     letter-spacing: 0%;
     text-align: center;
-    padding-bottom: 24px;
+    padding: 0 24px 24px 24px;
 }
 
 
+@media (max-width: 1400px) {
+    .community-section h2 {
+        margin: 0;
+    }
+}
+
 @media (max-width: 1100px) {
     .community-section h2 {
-        margin: 0px;
+        margin: 0;
     }
 
     .features-grid {
         flex-direction: column;
+        gap: 50px;
     }
 }
 </style>

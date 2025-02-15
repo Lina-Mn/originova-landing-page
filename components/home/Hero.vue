@@ -152,15 +152,7 @@ export default {
 }
 
 
-
-@media (max-width: 1450px) {
-    .carousel {
-        padding: 9px 0 90px 0;
-        justify-content: center;
-    }
-}
-
-@media (max-width: 1100px) {
+@media (max-width: 1400px) {
 
     .carousel-inner {
         /* display: ; */
@@ -175,7 +167,14 @@ export default {
         gap: 50px;
     }
 
-    .hero-content {}
+    .hero-content {
+        padding: 0;
+        text-align: center;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
 
     .hero-img img {
         width: 80%;
