@@ -54,7 +54,8 @@
 .calendar-content {
     flex: 1;
     max-width: 50%;
-    margin-right: 144px;
+    margin: 51px 144px 51px 0;
+
     display: flex;
     flex-direction: column;
 }

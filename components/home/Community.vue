@@ -76,6 +76,10 @@ export default {
     align-content: center;
     margin: 24px 65px;
     box-shadow: 0px 2px 4px 0px rgba(171, 190, 209, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .feature-card h3 {
@@ -89,9 +93,12 @@ export default {
 
 .feature-card img {
     height: 64px;
+    width: 100%;
+    max-width: 100%;
     margin: auto;
-    display: block;
     padding: 0 101px;
+    display: block;
+    object-fit: contain;
 }
 
 .feature-card p {
@@ -113,6 +120,4 @@ export default {
         flex-direction: column;
     }
 }
-
-
 </style>
