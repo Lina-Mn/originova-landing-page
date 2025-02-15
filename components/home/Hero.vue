@@ -50,7 +50,7 @@ export default {
     overflow: hidden;
 }
 
-.hero .container{
+.hero .container {
     max-width: 1000px;
 }
 
@@ -110,19 +110,20 @@ export default {
 .hero-img {
     flex: 1;
     flex-shrink: 0;
-    max-width: 50%;
+    /* max-width: 50%; */
     /* max-width: 100%; */
     margin: 0 144px;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+
+    min-width: 300px;
+    text-align: center;
 }
 
 .hero-img img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
     max-width: 100%;
+    height: auto;
 }
 
 .carousel-indicators {
@@ -165,8 +166,7 @@ export default {
         /* display: ; */
     }
 
-    .carousel-inner
-    .hero-section {
+    .carousel-inner .hero-section {
         flex-direction: column-reverse;
         align-items: center;
     }
@@ -175,16 +175,15 @@ export default {
         gap: 50px;
     }
 
-    .hero-content {
-    }
+    .hero-content {}
 
-    .hero-img img{
+    .hero-img img {
         width: 80%;
     }
 
     .hero-btn {
         justify-content: center;
-        
+
     }
 }
 </style>
