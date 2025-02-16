@@ -158,6 +158,10 @@ export default {
 }
 
 .hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     font-size: clamp(40px, 5vw, 64px);
     font-weight: 600;
     line-height: 76px;
@@ -259,12 +263,11 @@ export default {
     .hero-text h1,
     .hero-text p {
         text-align: center;
+        font-size: clamp(32px, 4vw, 64px);
     }
 
     .hero-text p {
-        font-size: 14px;
-        max-width: 90%;
-        margin: 0 auto;
+        font-size: clamp(12px, 5vw, 14px);
         line-height: 24px;
     }
 

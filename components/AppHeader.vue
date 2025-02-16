@@ -142,6 +142,10 @@ export default {
 }
 
 @media (max-width: 1100px) {
+    .nav-container {
+        margin: auto;
+        padding: 0 12px;
+    }
     .hamburger {
         display: flex;
         flex-direction: column;

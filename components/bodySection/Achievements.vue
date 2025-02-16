@@ -157,7 +157,7 @@ export default {
     }
 
     .stat-card {
-        gap: 20px;
+        gap: 0;
     }
 
     .stat-value {
