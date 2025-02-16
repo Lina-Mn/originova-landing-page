@@ -114,6 +114,9 @@ export default {
     font-weight: 400;
     color: var(--Grey);
     padding-top: 16px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: left;
 }
 
 .hero-img {
@@ -191,6 +194,13 @@ export default {
     .hero-text h1,
     .hero-text p {
         text-align: center;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+        max-width: 90%; 
+        margin: 0 auto;
+        line-height: 24px;
     }
 
     .hero-img img {
