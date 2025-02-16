@@ -1,39 +1,41 @@
 <template>
-    <div class="footer-grid">
-        <div class="footer-brand">
-            <h1 class="h1"> Pellentesque suscipit fringilla libero eu. </h1>
-            <button class="btn-primary-icon"> Get a Demo -> </button>
-        </div>
-        <div class="footer-info">
-            <div class="company-info">
-                <img src="~/assets/images/Logo-white.svg" alt="Nexcent">
-                <div class="copyrights">
-                    <p>Copyright © 2024 Nexcent ltd.</p>
-                    <p>All rights reserved</p>
-                </div>
-                <div class="social-links">
-                    <div class="social-link" v-for="(slink, sIndex) in socialLinks" :key="sIndex">
-                        <img :src="slink.icon" :alt="slink.label" />
+    <section class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h1 class="h1"> Pellentesque suscipit fringilla libero eu. </h1>
+                <button class="btn-primary-icon"> Get a Demo -> </button>
+            </div>
+            <div class="footer-info">
+                <div class="company-info">
+                    <img src="~/assets/images/Logo-white.svg" alt="Nexcent">
+                    <div class="copyrights">
+                        <p>Copyright © 2024 Nexcent ltd.</p>
+                        <p>All rights reserved</p>
+                    </div>
+                    <div class="social-links">
+                        <div class="social-link" v-for="(slink, sIndex) in socialLinks" :key="sIndex">
+                            <img :src="slink.icon" :alt="slink.label" />
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="footer-links">
-                <div class="footer-link" v-for="(column, index) in columns" :key="index">
-                    <h4 class="h4">{{ column.title }}</h4>
-                    <ul>
-                        <li v-for="(link, linkIndex) in column.links" :key="linkIndex">
-                            <a href="#">{{ link }}</a>
-                        </li>
-                    </ul>
-                    <div v-if="column.newsletter" class="newsletter-container">
-                        <div class="input-container">
-                            <input type="email" placeholder="Enter your email">
+                <div class="footer-links">
+                    <div class="footer-link" v-for="(column, index) in columns" :key="index">
+                        <h4 class="h4">{{ column.title }}</h4>
+                        <ul>
+                            <li v-for="(link, linkIndex) in column.links" :key="linkIndex">
+                                <a href="#">{{ link }}</a>
+                            </li>
+                        </ul>
+                        <div v-if="column.newsletter" class="newsletter-container">
+                            <div class="input-container">
+                                <input type="email" placeholder="Enter your email">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>
@@ -84,9 +86,8 @@ export default {
 
 <style>
 .footer-grid {
-    margin-top: 54px;
     background-color: var(--Silver);
-    color: var(--Silver);
+    margin-top: 54px;
     gap: 125px;
 }
 
@@ -128,6 +129,10 @@ export default {
     padding: 64px 0 75px 165px;
 }
 
+.copyrights p {
+    color: var(--Silver);
+}
+
 .footer-links {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -146,6 +151,11 @@ export default {
 
 .footer-link ul li {
     margin-bottom: 12px;
+}
+
+.footer-link a {
+    color: var(--Silver);
+    text-decoration: none;
 }
 
 .input-container {

@@ -176,7 +176,9 @@ export default {
         text-align: center;
     }
 
-    .hero-text {
+    .hero-text,
+    .hero-text h1,
+    .hero-text p {
         text-align: center;
     }
 

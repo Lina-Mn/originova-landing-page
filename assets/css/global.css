@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Inter;     
+    src: url('@/assets/fonts/Inter-VariableFont_opsz,wght.ttf');
+}
+
 :root {
     --Black: #263238;
     --D-Grey: #4D4D4D;

@@ -125,5 +125,9 @@ export default {
     .community-text p {
         margin: 0;
     }
+
+    .community-text h2 {
+        text-align: center;
+    }
 }
 </style>

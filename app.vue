@@ -19,13 +19,14 @@ import AppHeader from './components/AppHeader.vue';
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: var(--Black);
+  font-family: Inter, serif;
 }
 
 body {
-  font-family: "Inter", serif;
-  color: var(--Black);
-  width: 100%;
+  width: 100dvw;
   overflow-x: hidden;
+  background-color: var(--White);
 }
 
 .app-wrapper {
