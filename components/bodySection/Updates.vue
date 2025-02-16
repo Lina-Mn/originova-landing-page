@@ -108,11 +108,15 @@ export default {
 }
 
 @media (max-width: 1100px) {
+    .updates .container {
+        padding-top: 0;
+    }
+
     .community-cards {
         flex-direction: column;
         align-items: center;
         gap: 50px;
-        margin: 0;
+        margin: 19px 0 0 0;
     }
 
     .community-card {

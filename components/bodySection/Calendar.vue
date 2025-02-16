@@ -27,7 +27,6 @@
     display: flex;
     justify-content: center;
     margin-top: 48px;
-    width: 100dvw;
     overflow-x: hidden;
 }
 
@@ -101,9 +100,11 @@
 
     .calendar-content {
         margin: 0;
-        margin-top: 63px;
+        margin-top: 43px;
         text-align: center;
         align-items: center;
+        max-width: 100%;
+        padding: 0 20px;
     }
 
     .calendar-btn {

@@ -204,7 +204,7 @@ textarea::placeholder {
     }
 
     .footer-info {
-        flex-direction: column-reverse;
+        flex-direction: column;
         align-items: center;
         gap: 15px;
     }
@@ -214,8 +214,16 @@ textarea::placeholder {
         gap: 18px;
     }
 
+    .copyrights {
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
     .footer-links {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         padding: 0;
         margin: 32px 0;
         text-align: center;
@@ -223,6 +231,10 @@ textarea::placeholder {
 
     .footer-links h4 {
         text-align: center;
+    }
+
+    .footer-link:last-child {
+        grid-column: 1 / span 2;
     }
 }
 </style>

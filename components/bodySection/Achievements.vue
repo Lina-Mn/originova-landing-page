@@ -47,19 +47,17 @@ export default {
 <style>
 .achievements {
     background-color: var(--Silver);
-    margin-top: 48px;
-    width: 100dvw;
-    overflow-x: hidden;
     display: flex;
     justify-content: center;
 }
 
 .achievements .container {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    max-width: 1200px;
+    width: 100%;
     padding: 0 20px;
+    gap: 72px;
 }
 
 .section-heading {
@@ -84,7 +82,7 @@ export default {
 }
 
 .counts {
-    padding: 64px 0;
+    margin: 64px 0;
 }
 
 .stats-grid {
@@ -131,6 +129,7 @@ export default {
 @media (max-width: 1100px) {
     .achievements .container {
         flex-direction: column;
+        gap: 0;
     }
 
     .section-heading {
@@ -145,17 +144,13 @@ export default {
     }
 
     .counts {
-        padding: 28px;
+        margin: 0;
     }
 }
 
 
 
 @media (max-width: 992px) {
-
-    .counts {
-        padding: 48px 0;
-    }
 
     .stats-grid {
         gap: 30px;
@@ -183,7 +178,6 @@ export default {
     }
 
     .stats-grid {
-        grid-template-columns: 1fr;
         gap: 24px;
     }
 

@@ -1,7 +1,9 @@
 <template>
     <section class="hero">
         <div class="container">
-            <div class="carousel">
+            <div class="carousel" @touchstart="startSwipe" @touchmove="moveSwipe" @touchend="endSwipe"
+                @mousedown="startMouseSwipe" @mousemove="moveMouseSwipe" @mouseup="endMouseSwipe"
+                @mouseleave="endMouseSwipe">
                 <div class="carousel-inner" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
                     <div v-for="n in 3" :key="n" class="hero-section">
                         <div class="hero-content">
@@ -34,27 +36,90 @@ export default {
     data() {
         return {
             currentIndex: 0,
+            touchStartX: 0,
+            touchEndX: 0,
+            isMouseDown: false,
+            isDragging: false, // to track movement
         };
     },
     methods: {
         goToSlide(index) {
             this.currentIndex = index;
         },
+
+        // **Touch Events**
+        startSwipe(event) {
+            this.touchStartX = event.touches[0].clientX;
+            this.isDragging = false;
+        },
+        moveSwipe(event) {
+            this.isDragging = true;
+            this.touchEndX = event.touches[0].clientX;
+        },
+        endSwipe() {
+            if (this.isDragging) {
+                this.handleSwipe();
+            }
+        },
+
+        // **Mouse Events**
+        startMouseSwipe(event) {
+            this.isMouseDown = true;
+            this.isDragging = false; // Reset drag flag
+            this.touchStartX = event.clientX;
+        },
+        moveMouseSwipe(event) {
+            if (this.isMouseDown) {
+                this.isDragging = true; // Mark as dragging
+                this.touchEndX = event.clientX;
+            }
+        },
+        endMouseSwipe() {
+            if (this.isMouseDown && this.isDragging) {
+                this.handleSwipe();
+            }
+            this.isMouseDown = false;
+        },
+
+        // **Swipe Logic**
+        handleSwipe() {
+            const swipeDistance = this.touchStartX - this.touchEndX;
+            const swipeThreshold = 50; // Minimum distance for a swipe
+
+            if (swipeDistance > swipeThreshold) {
+                this.nextSlide();
+            } else if (swipeDistance < -swipeThreshold) {
+                this.prevSlide();
+            }
+        },
+
+        nextSlide() {
+            if (this.currentIndex < 2) {
+                this.currentIndex++;
+            } else {
+                this.currentIndex = 0; // Loop back to first slide
+            }
+        },
+        prevSlide() {
+            if (this.currentIndex > 0) {
+                this.currentIndex--;
+            } else {
+                this.currentIndex = 2; // Loop back to last slide
+            }
+        },
     },
-}
+};
 </script>
 
 <style>
 .hero {
     width: 100%;
-    min-height: 100vh;
     overflow: hidden;
     align-items: center;
 }
 
 .hero .container {
     background-color: var(--Silver);
-    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -174,8 +239,7 @@ export default {
 
     .carousel {
         justify-content: center;
-        padding: 96px 1%;
-        padding-top: 0;
+        padding: 43px 1%;
     }
 
     .hero-section {

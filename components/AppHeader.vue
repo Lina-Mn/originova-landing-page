@@ -5,16 +5,17 @@
                 <img src="~/assets/images/Logo.svg" alt="Nexcent" />
             </div>
 
-            <div class="nav-links" :class="{ 'active': isMenuOpen }">
-                <NuxtLink v-for="item in menuItems" :key="item" :to="item.toLowerCase()" class="nav-link"
-                    @click="closeMenu">
-                    {{ item }}
-                </NuxtLink>
-            </div>
-
-            <div class="auth-btns" :class="{ 'active': isMenuOpen }">
-                <button class="login-btn">Login</button>
-                <button class="signup-btn">Sign up</button>
+            <div class="nav-links-menu" :class="{ 'active': isMenuOpen }">
+                <div class="nav-links" :class="{ 'active': isMenuOpen }">
+                    <NuxtLink v-for="item in menuItems" :key="item" :to="item.toLowerCase()" class="nav-link"
+                        @click="closeMenu">
+                        {{ item }}
+                    </NuxtLink>
+                </div>
+                <div class="auth-btns" :class="{ 'active': isMenuOpen }">
+                    <button class="login-btn">Login</button>
+                    <button class="signup-btn">Sign up</button>
+                </div>
             </div>
 
             <!-- Hamburger Menu -->
@@ -62,16 +63,15 @@ export default {
 <style>
 .header {
     position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    left: 0;
-    width: 100%;
     height: 70px;
+    top: 0;
+    width: 100%;
     background-color: var(--Silver);
-    z-index: 1000;
     transition: all 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .header.scrolled {
@@ -81,80 +81,40 @@ export default {
 
 .nav-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    margin: 0 105px;
     width: 100%;
-    max-width: 1440px;
-    margin: auto;
-    padding: 0 24px;
 }
 
-/* Added responsive padding */
-@media (min-width: 1200px) {
-    .nav-container {
-        padding: 0 144px;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1199px) {
-    .nav-container {
-        padding: 0 80px;
-    }
-}
-
-.logo {
-    flex: 0 0 auto;
-}
-
-.logo img {
-    min-width: 155px;
-    height: auto;
-}
-
-/* Desktop Navigation */
-.nav-links {
+.nav-links-menu {
     display: flex;
     align-items: center;
-    flex: 1 1 auto;
-    justify-content: center;
+    gap: 124.5px;
+}
+
+.nav-links {
+    display: flex;
     gap: 50px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-}
-
-/* Responsive gap adjustments */
-@media (min-width: 1100px) and (max-width: 1300px) {
-    .nav-links {
-        gap: 30px;
-    }
-}
-
-.nav-link {
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-    color: var(--Primary);
 }
 
 .auth-btns {
     display: flex;
     gap: 14px;
-    flex: 0 0 auto;
 }
 
 .login-btn {
-    background: none;
+    background: var(--Silver);
     color: var(--Primary);
     border: none;
     cursor: pointer;
-    padding: 10px 20px;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 20px;
     transition: opacity 0.3s ease;
+
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 6px;
+    padding: 10px 20px;
+    gap: 10px;
 }
 
 .login-btn:hover {
@@ -171,100 +131,72 @@ export default {
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
-    transition: opacity 0.3s ease;
 }
 
 .signup-btn:hover {
     opacity: 0.9;
 }
 
-/* Hamburger Menu */
 .hamburger {
     display: none;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
-}
-
-.hamburger .bar {
-    width: 30px;
-    height: 3px;
-    background: var(--Primary);
-    transition: 0.3s ease;
-}
-
-.hamburger.active .bar:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px);
-}
-
-.hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.active .bar:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
-}
-
-/* Medium screens - adjust spacing */
-@media (min-width: 1100px) and (max-width: 1440px) {
-
-    .login-btn,
-    .signup-btn {
-        padding: 10px 15px;
-    }
-
-    .auth-btns {
-        gap: 10px;
-    }
 }
 
 @media (max-width: 1100px) {
-
-    .nav-links,
-    .auth-btns {
-        display: none;
+    .hamburger {
+        display: flex;
         flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    .hamburger .bar {
+        width: 30px;
+        height: 3px;
+        background: var(--Primary);
+        transition: 0.3s ease;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+
+    .nav-links-menu {
+        display: none;
+        text-align: center;
+        transition: 0.3s ease;
+    }
+
+    .nav-links-menu.active {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         position: fixed;
         top: 70px;
         left: 0;
         width: 100%;
-        height: calc(100vh - 70px);
+        padding-bottom: 32px;
+        opacity: 1;
         background: var(--Silver);
-        text-align: center;
-        padding: 40px 0;
-        gap: 30px;
-        transform: translateY(-100%);
-        opacity: 0;
-        transition: all 0.3s ease;
+        box-shadow: 0px 4px 8px 0px rgba(171, 190, 209, 0.4);
+        transform: translateY(0);
+        gap: 25px;
     }
 
     .nav-links.active,
     .auth-btns.active {
         display: flex;
-        transform: translateY(0);
-        opacity: 1;
-    }
-
-    .auth-btns.active {
-        top: auto;
-        bottom: 100px;
-        height: auto;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-}
-
-/* Tablet adjustments */
-@media (max-width: 768px) {
-    .nav-container {
-        padding: 0 16px;
-    }
-
-    .logo img {
-        width: 120px;
-        min-width: 120px;
+        flex-direction: column;
+        gap: 25px;
     }
 }
 </style>

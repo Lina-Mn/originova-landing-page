@@ -97,9 +97,9 @@
     .unlock .container {
         flex-direction: column;
         align-items: center;
-        padding: 30px 20px;
+        /* padding: 30px 20px; */
     }
-
+    
     .unlock-frame {
         margin-right: 0;
         margin-bottom: 30px;
@@ -112,6 +112,7 @@
         max-width: 100%;
         align-items: center;
         text-align: center;
+        margin-bottom: 48px;
     }
 
     .unlock-text {
