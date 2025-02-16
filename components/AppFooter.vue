@@ -28,7 +28,7 @@
                         </ul>
                         <div v-if="column.newsletter" class="newsletter-container">
                             <div class="input-container">
-                                <input type="email" placeholder="Enter your email">
+                                <input type="email" placeholder="Enter your email" style="color: white;">
                             </div>
                         </div>
                     </div>
@@ -173,7 +173,7 @@ export default {
 
 input::placeholder,
 textarea::placeholder {
-    color: var(--White);
+    color: white;
     font-weight: 400;
     font-size: 14px;
     letter-spacing: 0%;

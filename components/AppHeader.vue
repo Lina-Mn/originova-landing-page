@@ -149,7 +149,7 @@ export default {
 @media (max-width: 1100px) {
     .nav-container {
         margin: auto;
-        padding: 0 12px;
+        padding: 0 20px;
     }
     .hamburger {
         display: flex;

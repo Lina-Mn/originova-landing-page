@@ -116,7 +116,7 @@ export default {
         flex-direction: column;
         align-items: center;
         gap: 50px;
-        margin: 19px 0 0 0;
+        margin: 19px 0;
     }
 
     .community-card {
