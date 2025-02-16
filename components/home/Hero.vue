@@ -47,13 +47,17 @@ export default {
 <style>
 .hero {
     width: 100%;
-    overflow: hidden;
     min-height: 100vh;
+    overflow: hidden;
+    align-items: center;
 }
 
 .hero .container {
     background-color: var(--Silver);
-    min-height: 100vh
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .carousel {
@@ -89,13 +93,14 @@ export default {
 }
 
 .hero-text {
-    font-size: 64px;
+    font-size: clamp(40px, 5vw, 64px);
     font-weight: 600;
     line-height: 76px;
     text-align: left;
 }
 
 .hero-text h1 {
+    font-size: clamp(40px, 5vw, 64px);
     color: var(--D-Grey);
     text-align: left;
 }
@@ -105,9 +110,10 @@ export default {
 }
 
 .hero-text p {
-    font-size: 16px;
+    font-size: clamp(14px, 2vw, 16px);
     font-weight: 400;
     color: var(--Grey);
+    padding-top: 16px;
 }
 
 .hero-img {
@@ -166,6 +172,7 @@ export default {
     .carousel {
         justify-content: center;
         padding: 96px 1%;
+        padding-top: 0;
     }
 
     .hero-section {
@@ -175,6 +182,9 @@ export default {
     .hero-content {
         padding: 0;
         text-align: center;
+    }
+    .hero-text {
+        line-height: normal;
     }
 
     .hero-text,
