@@ -286,4 +286,10 @@ export default {
 
     }
 }
+
+@media (max-width: 450px) {
+    .hero-content {
+        width: 25%;
+    }
+}
 </style>
