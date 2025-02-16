@@ -78,6 +78,7 @@ export default {
     padding: 16px 144px;
 }
 
+
 .feature-card {
     align-content: center;
     box-shadow: 0px 2px 4px 0px rgba(171, 190, 209, 0.2);
@@ -88,13 +89,19 @@ export default {
     gap: 8px;
 }
 
+.feature-card .member {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
 .feature-card h3 {
     margin-bottom: 0.5rem;
     font-weight: 700;
     font-size: 28px;
     line-height: 36px;
     text-align: center;
-    padding: 0 16px;
+    padding: 0 5%;
 }
 
 .feature-card img {

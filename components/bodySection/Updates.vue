@@ -97,7 +97,7 @@ export default {
 }
 
 .community-card h4 {
-    padding: 0 16px;
+    padding: 0 8%;
 }
 
 
