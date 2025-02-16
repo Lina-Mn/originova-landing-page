@@ -87,6 +87,11 @@ export default {
     width: 100%;
 }
 
+.logo {
+    padding-right: 20px;
+    flex-shrink: 0;
+}
+
 .nav-links-menu {
     display: flex;
     align-items: center;
