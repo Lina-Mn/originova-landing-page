@@ -186,6 +186,7 @@ export default {
         padding: 0;
         text-align: center;
     }
+
     .hero-text {
         line-height: normal;
     }
@@ -198,9 +199,15 @@ export default {
 
     .hero-text p {
         font-size: 14px;
-        max-width: 90%; 
+        max-width: 90%;
         margin: 0 auto;
         line-height: 24px;
+    }
+
+    .hero-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .hero-img img {
