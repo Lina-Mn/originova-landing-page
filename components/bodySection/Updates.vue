@@ -112,6 +112,7 @@ export default {
         flex-direction: column;
         align-items: center;
         gap: 50px;
+        margin: 0;
     }
 
     .community-card {
@@ -120,6 +121,10 @@ export default {
 
     .community-card h4 {
         padding: 0;
+    }
+
+    .community-text {
+        margin: 0 30px;
     }
 
     .community-text p {

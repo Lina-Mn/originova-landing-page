@@ -137,6 +137,11 @@ export default {
     .features-grid {
         flex-direction: column;
         gap: 50px;
+        padding: 16px 30px;
+    }
+
+    .feature-card h3 {
+        padding: 0;
     }
 }
 </style>

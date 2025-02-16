@@ -165,6 +165,7 @@ export default {
 
     .carousel {
         justify-content: center;
+        padding: 96px 1%;
     }
 
     .hero-section {
