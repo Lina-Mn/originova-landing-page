@@ -2,7 +2,7 @@
     <section class="hero">
         <div class="container">
             <div class="carousel">
-                <div class="carousel-inner" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
+                <div class="carousel-inner" :style="{ transform: `translateX(-${transformValue}%)` }">
                     <div v-for="n in 3" :key="n" class="hero-section">
                         <div class="hero-content">
                             <div class="hero-text">
@@ -36,9 +36,23 @@ export default {
             currentIndex: 0,
         };
     },
+    computed: {
+        transformValue() {
+            return window.innerWidth < 768 ? this.currentIndex * 100.5 : this.currentIndex * 100;
+        }
+    },
+    mounted() {
+        window.addEventListener("resize", this.handleResize);
+    },
+    beforeUnmount() {
+        window.removeEventListener("resize", this.handleResize);
+    },
     methods: {
         goToSlide(index) {
             this.currentIndex = index;
+        },
+        handleResize() {
+            this.$forceUpdate(); // Trigger reactivity when resizing
         }
     },
 }
@@ -48,27 +62,30 @@ export default {
 .hero {
     width: 100%;
     overflow: hidden;
+    min-height: 100vh;
 }
 
 .hero .container {
-    max-width: 1000px;
+    background-color: var(--Silver);
+    min-height: 100vh
 }
 
 .carousel {
     display: flex;
     align-content: center;
     justify-content: start;
-    width: 100dvw;
+    width: 100%;
     height: 100%;
-    overflow: hidden;
+    /* overflow: clip; */
     position: relative;
     padding: 96px 144px;
-    background-color: var(--Silver);
+    overflow: hidden;
 }
 
 .carousel-inner {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    width: 300%;
 }
 
 .hero-section {
@@ -124,13 +141,14 @@ export default {
 .hero-img img {
     max-width: 100%;
     height: auto;
+    max-height: 400px;
 }
 
 .carousel-indicators {
     display: flex;
     justify-content: center;
     position: absolute;
-    bottom: 10px;
+    bottom: 0;
     left: 0;
     right: 0;
     gap: 8px;
@@ -154,13 +172,13 @@ export default {
 
 @media (max-width: 1400px) {
 
-    .carousel-inner {
-        /* display: ; */
-    }
-
     .carousel-inner .hero-section {
         flex-direction: column-reverse;
         align-items: center;
+    }
+
+    .carousel {
+        justify-content: center;
     }
 
     .hero-section {

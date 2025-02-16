@@ -7,8 +7,10 @@
             </div>
             <div class="features-grid">
                 <div v-for="(feature, index) in features" :key="index" class="feature-card">
-                    <img :src="feature.icon" :alt="feature.title" />
-                    <h3>{{ feature.title }}</h3>
+                    <div class="member">
+                        <img :src="feature.icon" :alt="feature.title" />
+                        <h3>{{ feature.title }}</h3>
+                    </div>
                     <p>{{ feature.description }}</p>
                 </div>
             </div>
@@ -83,6 +85,7 @@ export default {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    gap: 8px;
 }
 
 .feature-card h3 {

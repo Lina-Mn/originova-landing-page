@@ -101,6 +101,12 @@ export default {
 }
 
 
+@media (max-width: 1400px) {
+    .community-text p {
+        margin: 0;
+    }
+}
+
 @media (max-width: 1100px) {
     .community-cards {
         flex-direction: column;

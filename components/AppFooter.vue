@@ -91,12 +91,21 @@ export default {
 }
 
 .footer-brand {
-    padding: 32px 276.5px 0 275.6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 32px;
     text-align: center;
+    gap: 32px;
+}
+
+.footer-brand h1 {
+    padding: 0 25%;
 }
 
 .footer-brand button {
-    margin: 32px 0 32px 0;
+    margin-bottom: 32px;
 }
 
 .social-links {
@@ -148,7 +157,7 @@ export default {
     background-color: #515b60;
     border-radius: 8px;
     opacity: 20%;
-    
+
     padding: 9px 30px 11px 12px;
 }
 
@@ -173,6 +182,11 @@ textarea::placeholder {
     transform: translateY(-50%);
 }
 
+@media (max-width: 1400px) {
+    .footer-brand h1 {
+        padding: 0 5%;
+    }
+}
 
 @media (max-width: 1100px) {
     .footer-brand {
@@ -201,5 +215,4 @@ textarea::placeholder {
         text-align: center;
     }
 }
-
 </style>
