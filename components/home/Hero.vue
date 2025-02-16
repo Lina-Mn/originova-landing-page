@@ -2,7 +2,7 @@
     <section class="hero">
         <div class="container">
             <div class="carousel">
-                <div class="carousel-inner" :style="{ transform: `translateX(-${transformValue}%)` }">
+                <div class="carousel-inner" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
                     <div v-for="n in 3" :key="n" class="hero-section">
                         <div class="hero-content">
                             <div class="hero-text">
@@ -36,24 +36,10 @@ export default {
             currentIndex: 0,
         };
     },
-    computed: {
-        transformValue() {
-            return window.innerWidth < 768 ? this.currentIndex * 100.5 : this.currentIndex * 100;
-        }
-    },
-    mounted() {
-        window.addEventListener("resize", this.handleResize);
-    },
-    beforeUnmount() {
-        window.removeEventListener("resize", this.handleResize);
-    },
     methods: {
         goToSlide(index) {
             this.currentIndex = index;
         },
-        handleResize() {
-            this.$forceUpdate(); // Trigger reactivity when resizing
-        }
     },
 }
 </script>
