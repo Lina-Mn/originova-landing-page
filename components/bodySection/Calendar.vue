@@ -102,7 +102,7 @@
     .calendar-content {
         margin: 0;
         margin-top: 63px;
-        text-align: justify;
+        text-align: center;
         align-items: center;
     }
 
