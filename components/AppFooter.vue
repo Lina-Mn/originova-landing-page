@@ -166,7 +166,7 @@ export default {
 .input-container input {
     background-color: #515b60;
     border-radius: 8px;
-    opacity: 20%;
+    /* opacity: 20%; */
 
     padding: 9px 30px 11px 12px;
 }

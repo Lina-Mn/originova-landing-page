@@ -26,7 +26,7 @@
 .calendar {
     display: flex;
     justify-content: center;
-    /* margin-top: 48px; */
+    padding-top: 24px;
     overflow-x: hidden;
 }
 

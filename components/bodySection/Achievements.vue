@@ -49,7 +49,7 @@ export default {
     background-color: var(--Silver);
     display: flex;
     justify-content: center;
-    padding-bottom: 48px;
+    padding-bottom: 28px;
 }
 
 .achievements .container {
@@ -146,10 +146,79 @@ export default {
 
     .counts {
         margin: 0;
-
     }
 }
 
 
 
+@media (max-width: 992px) {
+
+    .stats-grid {
+        gap: 30px;
+    }
+
+    .stat-card {
+        gap: 0;
+    }
+
+    .stat-value {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .section-heading h2 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+
+    .counts {
+        padding: 40px 0;
+    }
+
+    .stats-grid {
+        gap: 24px;
+    }
+
+    .stat-card {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-heading {
+        padding: 48px 0 0 0;
+    }
+
+    .section-heading h2 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .section-heading p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .counts {
+        padding: 32px 0;
+    }
+
+    .stat-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .stat-value {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .stat-label {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
 </style>
