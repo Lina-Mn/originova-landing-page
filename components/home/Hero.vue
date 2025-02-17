@@ -17,7 +17,13 @@
                             </div>
                         </div>
                         <div class="hero-img">
-                            <img src="~/assets/images/Illustration.svg" alt="Hero">
+                            <!-- <img src="~/assets/images/Illustration.svg" alt="Hero"> -->
+                            <nuxt-img src="/images/Illustration.svg" alt="Hero" width="391" height="407"
+                            v-slot="{ src, isLoaded, imgAttrs }">
+                                <img v-if="isLoaded" v-bind="imgAttrs"
+                                :src="src">
+                                <img v-else src="/images/Illustration.svg" alt="Hero Preload" width="40" height="40" >
+                            </nuxt-img>
                         </div>
                     </div>
                 </div>
@@ -140,7 +146,8 @@ export default {
 }
 
 .hero-section {
-    flex: 0 0 100%; /* show 100% of each slide */
+    flex: 0 0 100%;
+    /* show 100% of each slide */
     display: flex;
 }
 

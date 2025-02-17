@@ -2,7 +2,12 @@
     <section class="calendar">
         <div class="container">
             <div class="pana">
-                <img src="~/assets/images/Pana.svg" alt="Mobile LogIng" srcset="">
+                <!-- <img src="~/assets/images/Pana.svg" alt="Mobile LogIng"> -->
+                <nuxt-img src="/images/Pana.svg" alt="Hero" width="441" height="433"
+                    v-slot="{ src, isLoaded, imgAttrs }">
+                    <img v-if="isLoaded" v-bind="imgAttrs" :src="src">
+                    <img v-else src="/images/Pana.svg" alt="Hero Preload" width="40" height="40">
+                </nuxt-img>
             </div>
             <div class="calendar-content">
                 <div class="calendar-text">

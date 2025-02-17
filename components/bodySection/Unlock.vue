@@ -2,7 +2,12 @@
     <section class="unlock">
         <div class="container">
             <div class="unlock-frame">
-                <img src="~/assets/images/Unlock.svg" alt="Unlock Frame">
+                <!-- <img src="~/assets/images/Unlock.svg" alt="Unlock Frame"> -->
+                 <nuxt-img src="/images/Unlock.svg" alt="Unlock" width="442" height="433" v-slot="{ src, isLoaded, imgAttrs }" >
+                    <img v-if="isLoaded" v-bind="imgAttrs"
+                                :src="src">
+                                <img v-else src="/images/Unlock.svg" alt="Hero Preload" width="40" height="40" >
+                 </nuxt-img>
             </div>
             <div class="unlock-content">
                 <div class="unlock-text">
