@@ -181,7 +181,7 @@ export default {
     .nav-links-menu {
         display: none;
         text-align: center;
-        transition: 0.3s ease;
+        transition: all 0.3s ease;
     }
 
     .nav-links-menu.active {
@@ -193,7 +193,7 @@ export default {
         top: 70px;
         left: 0;
         width: 100%;
-        padding-bottom: 32px;
+        padding: 32px 0;
         opacity: 1;
         background: var(--Silver);
         box-shadow: 0px 4px 8px 0px rgba(171, 190, 209, 0.4);
