@@ -222,6 +222,7 @@ textarea::placeholder {
         flex-direction: column;
         align-items: center;
         gap: 15px;
+        padding: 64px 0;
     }
 
     .company-info {
