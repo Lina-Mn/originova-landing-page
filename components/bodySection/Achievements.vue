@@ -47,17 +47,14 @@ export default {
 <style>
 .achievements {
     background-color: var(--Silver);
-    display: flex;
-    justify-content: center;
-    padding-bottom: 28px;
 }
 
 .achievements .container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
-    padding: 0 20px;
+    padding: 0 144px;
     gap: 72px;
 }
 
@@ -66,7 +63,6 @@ export default {
     flex-direction: column;
     align-items: center;
     text-align: start;
-    margin: 20px 72px 20px 0;
 }
 
 .section-heading span {
@@ -82,16 +78,12 @@ export default {
     max-width: 500px;
 }
 
-.counts {
-    margin: 64px 0;
-}
-
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
-    padding: 20px 0;
-    margin-left: 72px;
+    padding: 64px 0;
+    /* margin-left: 72px; */
 }
 
 .stat-card {
@@ -128,20 +120,23 @@ export default {
 }
 
 @media (max-width: 1100px) {
+
     .achievements .container {
-        flex-direction: column;
-        gap: 0;
+        padding: 0;
     }
 
     .section-heading {
-        margin: 20px 0 20px 0;
-        padding: 20px 0 0 0;
+        /* margin: 20px 0 20px 0; */
         text-align: center;
     }
 
     .stats-grid {
         margin: 0;
-        padding: 0;
+        gap: 20px;
+    }
+
+    .stat-card {
+        gap: 15px;
     }
 
     .counts {
@@ -152,8 +147,14 @@ export default {
 
 
 @media (max-width: 992px) {
+    .achievements .container {
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 20px;
+    }
 
     .stats-grid {
+        padding: 0;
         gap: 30px;
     }
 
@@ -188,9 +189,6 @@ export default {
 }
 
 @media (max-width: 480px) {
-    .section-heading {
-        padding: 48px 0 0 0;
-    }
 
     .section-heading h2 {
         font-size: 24px;
@@ -219,6 +217,16 @@ export default {
     .stat-label {
         font-size: 14px;
         line-height: 20px;
+    }
+}
+
+@media (max-width: 360px) {
+    .stats-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .counts {
+        padding: 0;
     }
 }
 </style>

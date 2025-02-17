@@ -51,14 +51,14 @@ export default {
 
 <style>
 .community {
+    width: 100%;
+}
+
+.community .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
-}
-
-.community .container {
     gap: 16px;
 }
 

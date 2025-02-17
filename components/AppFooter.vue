@@ -119,6 +119,8 @@ export default {
     background-color: var(--Black);
     display: flex;
     gap: 125px;
+    justify-content: space-between;
+    padding: 64px 165px;
 }
 
 .company-info {
@@ -126,7 +128,6 @@ export default {
     flex-direction: column;
     align-content: center;
     justify-content: space-between;
-    padding: 64px 0 75px 165px;
 }
 
 .copyrights p {
@@ -136,7 +137,6 @@ export default {
 .footer-links {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin: 64px 165px 64px auto;
     gap: 30px;
 }
 
@@ -173,7 +173,7 @@ export default {
 
 input::placeholder,
 textarea::placeholder {
-    color: white;
+    color: var(--White);
     font-weight: 400;
     font-size: 14px;
     letter-spacing: 0%;
@@ -193,12 +193,27 @@ textarea::placeholder {
 }
 
 @media (max-width: 1400px) {
+    .footer-brand {
+        gap: 65px;
+    }
+
+    .footer-info {
+        padding: 64px 82px;
+        gap: 65px;
+    }
+
+    .footer-links {
+        gap: 15px;
+    }
+
     .footer-brand h1 {
         padding: 0 5%;
     }
+
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 890px) {
+
     .footer-brand {
         padding: 32px 0 0 0;
     }
@@ -225,7 +240,7 @@ textarea::placeholder {
     .footer-links {
         grid-template-columns: repeat(2, 1fr);
         padding: 0;
-        margin: 32px 0;
+        margin: 0 0 32px 0;
         text-align: center;
     }
 
@@ -236,5 +251,9 @@ textarea::placeholder {
     .footer-link:last-child {
         grid-column: 1 / span 2;
     }
+}
+
+@media (max-width: 992px) {
+    
 }
 </style>

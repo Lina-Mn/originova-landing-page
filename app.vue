@@ -5,13 +5,11 @@ import AppHeader from './components/AppHeader.vue';
 </script>
 
 <template>
-  <div class="app-wrapper">
     <AppHeader />
-    <main class="content">
+    <main>
       <NuxtPage />
     </main>
     <AppFooter />
-  </div>
 </template>
 
 <style>
@@ -24,21 +22,9 @@ import AppHeader from './components/AppHeader.vue';
 }
 
 body {
-  width: 100dvw;
+  width: 100%;
   overflow-x: hidden;
   background-color: var(--White);
 }
 
-.app-wrapper {
-  width: 100%;
-  min-height: 100vh;
-  position: relative;
-}
-
-.content {
-  margin-top: 70px;
-  width: 100%;
-  max-width: 100vw;
-  overflow-x: hidden;
-}
 </style>

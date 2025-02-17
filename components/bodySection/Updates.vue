@@ -13,7 +13,12 @@
             <div class="community-cards">
                 <div class="community-card" v-for="(item, index) in items" :key="index">
                     <h4 class="h4"> {{ item.title }} </h4>
-                    <button class="btn-tertiary-icon"> Readmore -> </button>
+                    <div class="readmore">
+                        <button class="btn-tertiary-icon">
+                            Readmore
+                            <img src="~/assets/icons/Right.svg" alt="arrow" class="icon">
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -42,7 +47,6 @@ export default {
 
 <style>
 .updates {
-    margin-top: 48px;
     width: 100%;
 }
 
@@ -98,6 +102,28 @@ export default {
 
 .community-card h4 {
     padding: 0 8%;
+}
+
+.community-card .readmore {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.readmore .btn-tertiary-icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.readmore .icon {
+    position: relative;
+
+}
+
+.readmore:hover {
+    opacity: 0.8;
 }
 
 

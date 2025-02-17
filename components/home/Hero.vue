@@ -115,14 +115,10 @@ export default {
 .hero {
     width: 100%;
     overflow: hidden;
-    align-items: center;
 }
 
 .hero .container {
     background-color: var(--Silver);
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .carousel {
@@ -144,8 +140,7 @@ export default {
 }
 
 .hero-section {
-    flex: 0 0 100%;
-    /* show 100% of each slide */
+    flex: 0 0 100%; /* show 100% of each slide */
     display: flex;
 }
 

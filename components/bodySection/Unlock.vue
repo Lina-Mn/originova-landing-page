@@ -112,7 +112,6 @@
         max-width: 100%;
         align-items: center;
         text-align: center;
-        margin-bottom: 48px;
     }
 
     .unlock-text {
